@@ -20,7 +20,7 @@
     "project_name":"PROJECT_2"
 }'
 
-[!Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/create_user.png)
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/create_user.png)
 
 response
 ```
@@ -36,7 +36,7 @@ response
     "project_name":"PROJECT_2"
 }'
 
-[!Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/validate_user.png)
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/validate_user.png)
 
 response
 ```
