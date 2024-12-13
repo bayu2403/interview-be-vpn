@@ -16,9 +16,15 @@
 ## TEST
 1. endpoint v1/users/
 > curl --location 'http://localhost:8001/api/v1/users/'
+
+
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_1/test1/image/users.png)
+
 2. grpc
 - import file .proto di postman, lalu hit dengan postman.
 - localhost:50051, GetUsers
+
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_1/test1/image/grpc_user.png)
 
 
 ## Code
