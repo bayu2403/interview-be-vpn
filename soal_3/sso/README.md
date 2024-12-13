@@ -27,6 +27,10 @@ response
 {"status": "success", "message": "User created successfully."}
 ```
 
+FLOW
+
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/create_user_flow.png)
+
 3. validate user 
 > curl --location 'http://localhost:8000/user/v1/validate-user/' \
 --header 'Content-Type: application/json' \
@@ -45,6 +49,10 @@ response
     "message": "Password validated successfully."
 }
 ```
+
+FLOW
+
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/validate_user_flow.png)
 
 ## Explanation
 ### Save user ke table
