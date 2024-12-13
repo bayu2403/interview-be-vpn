@@ -1,22 +1,22 @@
-## PREP
-1. install dependecies
-> pip install -r requirements.txt
-2. migrate db
-> python manage.py makemigrations && python manage.py migrate 
-3. run docker compose, to run vault and run write_secret to store secret in vault
-> docker compose up
-> python write_secret.py    
-4. hapus .example pada .env.example, untuk digunakan sebagai .env file  
-5. run seed.py
-> seed.py
-
 ## TEST
 1. run sso
 > cd sso
+
+> pip install -r requirements.txt
+
+> python manage.py makemigrations && python manage.py migrate 
+
+> python seed.py
+
 > python manage.py runserver
 
 2. run client
 > cd client_1
+
+> pip install -r requirements.txt
+
+> python manage.py makemigrations && python manage.py migrate 
+
 > python manage.py runserver 8081
 
 3. generate token
