@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  vault:
+    image: hashicorp/vault:latest
+    container_name: vault
+    ports:
+      - "8200:8200"  # Expose Vault API port
+    environment:
+      - VAULT_DEV_ROOT_TOKEN_ID=myroot  # Use this for dev mode; replace with secure tokens for production
+      - VAULT_DEV_LISTEN_ADDRESS=0.0.0.0:8200  # Listen on all interfaces (for Docker to access it)
+    volumes:
+      - vault-data:/vault/file  # Persist data
+
+volumes:
+  vault-data:
