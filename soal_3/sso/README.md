@@ -20,6 +20,8 @@
     "project_name":"PROJECT_2"
 }'
 
+[!Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/create_user.png)
+
 response
 ```
 {"status": "success", "message": "User created successfully."}
@@ -33,6 +35,8 @@ response
     "password":"pass3",
     "project_name":"PROJECT_2"
 }'
+
+[!Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/validate_user.png)
 
 response
 ```
