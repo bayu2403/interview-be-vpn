@@ -29,7 +29,7 @@ response
 
 FLOW
 
-![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/create_user_flow.png)
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/create_user_flow2.png)
 
 3. validate user 
 > curl --location 'http://localhost:8000/user/v1/validate-user/' \
@@ -52,7 +52,7 @@ response
 
 FLOW
 
-![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/validate_user_flow.png)
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_3/sso/image/validate_user_flow2.png)
 
 ## Explanation
 ### Save user ke table
