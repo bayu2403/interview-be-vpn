@@ -24,6 +24,8 @@
 --form 'username="user1"' \
 --form 'password="password1"'
 
+![Screenshot]()
+
 4. hit client 1 api
 > curl --location --request POST 'http://localhost:8081/validate-jwt/' \
 --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzM0MTU5Mzc2LCJpYXQiOjE3MzQwNzI5NzYsImp0aSI6IjE0NzFjMzUwZGYxNjQ1ZTdhZjE3MDUzYzFkYjBhZGRmIiwidXNlcl9pZCI6MX0.QM3UvyOu8-pUWDLkkUHkDp8ue52ud5SOYSWbdRECyrNJG-vT_wQiizlVlcUa1x5ItlXdfbZ_oo27__-dV6fdUYZJZZPtcLr_MPHdoF2p2_xJ8STpqEnPs53jYD_LCU-Ks7g9uY8MpDUuf6iLs7mUZmXQQdSx24poVcDYcaMBSpVGTBHI5VZVRV_j8KkuhFaNnbLt3FIMqbC3aKZdWQTOXP0h-0TPLT2PYfvOd4SML-mR62XFpul8OR7XxB1QbeJRqs0UOojw6EGg5mJR41282eqjCr9uu0XKmkmXBASKU_dFoSJQUQWgGpKvbHLmWZtPoworusayomRdvUOC0vg82g'
