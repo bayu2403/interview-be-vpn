@@ -41,9 +41,9 @@
 
 ## Explanation
 JWT signed menggunakan private dan public key, untuk menggenerate private dan public key bisa menggunakan
-> openssl genrsa -out private_key.pem 2048
+> openssl genrsa -out private.key 2048
 
-> openssl rsa -in private_key.pem -pubout -out public_key_1.pem
+> openssl rsa -in private.key -pubout -out public.key
 
 Menggunakan private key dan public key dibandingkan secret key untuk menandatangani JWT dilakukan karena Private key hanya ada di server SSO untuk menandatangani token, sementara public key digunakan layanan lain untuk memvalidasi token. Kalau public key bocor, token tetap aman karena tidak bisa digunakan untuk menandatangani token baru. Sebaliknya, kalau secret key bocor, siapa pun bisa membuat token palsu.
 
