@@ -38,3 +38,13 @@
 --form 'refresh_token="eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTczNDY3NzY3MCwiaWF0IjoxNzM0MDcyODcwLCJqdGkiOiJjZjA0NTUxNGNkNTg0N2FmYTQ4OWUyZTk1M2NiNmZkNyIsInVzZXJfaWQiOjF9.B9AruZ9t0RnqMZguGIpDFHlQ_jG5pMWkLFEHVKlEQ6t3qQ2zriQbgP_ambN0r562DeGxpbkQQQ9zGJDEB8LqqptxX03s0M8GEeH7Hlq3LahJ0RaCS_EuNpznxMIJiOlg_dEN5vVgmqGq-E4yOFbNPELdRM4EC5USTNCw4U0UndZ31qQENt3WkEh2ClpDPm8cH2_Lz6d3zvaeOBAvmCGYh9KCPZuUQCFhPEn3dr5bydYgXZTfIPJGnrhmR0HqSzkiP8DTg96BPPpYW4FZGlzzyN_GIjhcuTH2A5ERSQnH61zff73U0t8v2RivGWVbALSmL6F2PNSwtSwfzFlK3xyiMQ"' 
 
 ![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_2/image/refresh_token.png)
+
+## Explanation
+JWT signed menggunakan private dan public key, untuk menggenerate private dan public key bisa menggunakan
+> openssl genrsa -out private_key.pem 2048
+
+> openssl rsa -in private_key.pem -pubout -out public_key_1.pem
+
+Menggunakan private key dan public key dibandingkan secret key untuk menandatangani JWT dilakukan karena Private key hanya ada di server SSO untuk menandatangani token, sementara public key digunakan layanan lain untuk memvalidasi token. Kalau public key bocor, token tetap aman karena tidak bisa digunakan untuk menandatangani token baru. Sebaliknya, kalau secret key bocor, siapa pun bisa membuat token palsu.
+
+![Screenshot](https://github.com/bayu2403/interview-be-vpn/blob/main/soal_2/image/jwt.png)
