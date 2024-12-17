@@ -6,7 +6,17 @@
 3. run seed untuk populate db untuk pertamakali run
 > python seed.py  
 4. generate file proto, pada repo ini hasil generate file proto sudah disertakan
-> python -m grpc_tools.protoc --proto_path=./protos --python_out=./ --grpc_python_out=./ ./protos/user_proto/user.proto
+> python -m grpc_tools.protoc --proto_path=./protos --python_out=./protos/generated  --grpc_python_out=./protos/generated ./protos/user_proto/user.proto
+
+python -m grpc_tools.protoc --proto_path=./protos --python_out=./protos --grpc_python_out=./protos ./protos/user_proto/user.proto
+
+
+python -m grpc_tools.protoc \
+  --proto_path=./protos \
+  --python_out=./generated \
+  --grpc_python_out=./generated \
+  ./protos/user_proto/user.proto
+
 5. run grpc server
 > python grpc_server_run.py
 6. run django menggunakan uvicorn
@@ -35,6 +45,8 @@ test1/
 │   └── server.py
 ├── protos/
 │   └── user_proto/
+│       ├── user_pb2_grpc.py
+│       ├── user_pb2.py
 │       └── user.proto
 ├── test1/
 │   └── asgi.py

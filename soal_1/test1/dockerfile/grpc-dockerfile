@@ -1,0 +1,17 @@
+# Use a Python base image
+FROM python:3.9-slim
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy the entire grpc_server directory into the container
+COPY . /app
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Expose the port that gRPC server will use
+EXPOSE 50051
+
+# Run the gRPC server
+CMD ["python", "grpc_server_run.py"]

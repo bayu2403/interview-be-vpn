@@ -1,0 +1,38 @@
+version: "3.8"
+
+services:
+  grpc:
+    build:
+      dockerfile: ./dockerfile/grpc-dockerfile  # Path to grpc-dockerfile in the dockerfile folder
+    container_name: grpc_server
+    ports:
+      - "50051:50051"
+    networks:
+      - app_network
+
+  django:
+    build:
+      dockerfile: ./dockerfile/django-dockerfile  # Path to django-dockerfile in the dockerfile folder
+    container_name: django_uvicorn
+    command: ["uvicorn", "test1.asgi:application", "--host", "0.0.0.0", "--port", "8001"]
+    ports:
+      - "8001:8001"
+    networks:
+      - app_network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_proxy
+    ports:
+      - "8080:8080"  # HTTP/2 and HTTP ports
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - grpc
+      - django
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
